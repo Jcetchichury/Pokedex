@@ -1,0 +1,12 @@
+.status {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.barraPorgressiva{
+    width: 300px;
+    height: 30px;
+    margin: 10px;
+    border: 1px black solid;
+    border-radius: 10px;
+}
