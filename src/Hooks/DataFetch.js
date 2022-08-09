@@ -7,7 +7,7 @@ export default function DataFetch (){
 
     useEffect (() => {
         axios.get ('https://pokeapi.co/api/v2/pokemon/?limit=251')
-        .then(res => {
+        .then(res => {  
             setPokemon(res.data.results.map(pokemon => pokemon.name))
         })
     }, [])
