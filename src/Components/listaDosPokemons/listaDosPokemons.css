@@ -1,0 +1,11 @@
+.pokemon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
+    height: 30px;
+    border: 1px black solid;
+    border-radius: 30px;
+    margin: 5px;
+    font-size: 25px;
+}
