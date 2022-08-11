@@ -1,14 +1,33 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import "./listaDosPokemons.css"
 
-export default function ListaDosPokemons ({ pokemon }){
+const ListaDosPokemons = ({ id, name, hp, ataque, defesa, velocidade, typos, img, index}) => {
+    const navigation = useNavigate()
+
     return(
         <div>
-            <ul>
-                {pokemon.map( pokemon => (
-                <li key={pokemon} className="pokemon">{pokemon}</li>
-                ))}
-            </ul>
+            <li>
+                <button
+                    key={index}
+                    id= {id}
+                    name= {name}
+                    hp= {hp}
+                    ataque= {ataque}
+                    defesa= {defesa}
+                    velocidade= {velocidade}
+                    typos= {typos[0].name}
+                    img={img}
+                    className="pokemon" 
+                    onClick={() =>{
+                        navigation(`/${id}`, { replace: true })
+                        }
+                    }> 
+                    {name}
+                </button>
+            </li>
         </div>
     )
 }
+
+export default ListaDosPokemons
