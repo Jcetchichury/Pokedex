@@ -12,7 +12,6 @@ export default function StatusPokemon () {
                     <div className="tipos">
                         <Type />
                         <Type />
-                        <Type />
                     </div>
                     <BarraDeStatus />
                     <BarraDeStatus />
