@@ -16,7 +16,7 @@ const ListaDosPokemons = ({ id, name, hp, ataque, defesa, velocidade, typos, img
                     ataque= {ataque}
                     defesa= {defesa}
                     velocidade= {velocidade}
-                    typos= {typos[0].name}
+                    typos= {typos}
                     img={img}
                     className="pokemon" 
                     onClick={() =>{
