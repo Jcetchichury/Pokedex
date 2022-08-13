@@ -1,7 +1,216 @@
-.type{
+.bug {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100px;
     height: 30px;
     border: 1px black solid;
     border-radius: 10px;
     margin: 5px;
+    background-color: seagreen;
+}
+
+.dark {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    border: 1px black solid;
+    border-radius: 10px;
+    margin: 5px;
+    color: blanchedalmond;
+    background-color: black;
+}
+
+.dragon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    border: 1px black solid;
+    border-radius: 10px;
+    margin: 5px;
+    background-color: teal;
+}
+
+.electric {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    border: 1px black solid;
+    border-radius: 10px;
+    margin: 5px;
+    background-color: yellow;
+}
+
+.fairy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    border: 1px black solid;
+    border-radius: 10px;
+    margin: 5px;
+    background-color: rosybrown;
+}
+
+.fighting {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    border: 1px black solid;
+    border-radius: 10px;
+    margin: 5px;
+    background-color: orangered;
+}
+
+.fire {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    border: 1px black solid;
+    border-radius: 10px;
+    margin: 5px;
+    background-color: red;
+}
+
+.flying {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    border: 1px black solid;
+    border-radius: 10px;
+    margin: 5px;
+    background-color: skyblue;
+}
+
+.ghost {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    border: 1px black solid;
+    border-radius: 10px;
+    margin: 5px;
+    background-color: blueviolet;
+}
+
+.grass {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    border: 1px black solid;
+    border-radius: 10px;
+    margin: 5px;
+    background-color: green;
+}
+
+.ground {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    border: 1px black solid;
+    border-radius: 10px;
+    margin: 5px;
+    background-color: brown;
+}
+
+.ice {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    border: 1px black solid;
+    border-radius: 10px;
+    margin: 5px;
+    background-color: cyan;
+}
+
+.normal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    border: 1px black solid;
+    border-radius: 10px;
+    margin: 5px;
+    background-color: grey;
+}
+
+.poison {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    border: 1px black solid;
+    border-radius: 10px;
+    margin: 5px;
+    background-color: purple;
+}
+
+.psychic {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    border: 1px black solid;
+    border-radius: 10px;
+    margin: 5px;
+    background-color: palevioletred;
+}
+
+.rock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    border: 1px black solid;
+    border-radius: 10px;
+    margin: 5px;
+    background-color: maroon;
+}
+
+.steel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    border: 1px black solid;
+    border-radius: 10px;
+    margin: 5px;
+    background-color: slategray;
+}
+
+.water{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 30px;
+    border: 1px black solid;
+    border-radius: 10px;
+    margin: 5px;
+    background-color: blue;
 }
