@@ -1,14 +1,13 @@
 import React from "react";
-import BarraDeStatus from "../barraDeStatus/barraDeStatus";
 import LoadAnimation from "../loadAnimetion/loadAnimation";
-import {  useState, useEffect } from "react";
 import Type from "../type/type";
+import BarraDeStatus from "../barraDeStatus/barraDeStatus";
+import {  useState, useEffect } from "react";
 import "./statusPokemon.css"
 
 export default function StatusPokemon ({id}) {
 
     const [data, setData] = useState([]);
-    // const [teste, setTeste] = useState([])
     const [load, setLoad] = useState (true)
     const [type, setType] = useState ()
     const [display, setDisplay] = useState('')
@@ -18,15 +17,14 @@ export default function StatusPokemon ({id}) {
         const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
         const data = await res.json()
         setData(data)
-        const ola = (data.types[1])
-        setType(ola ? data.types[1].type.name : false)
-        setDisplay(ola ? 'block' : 'none')
+        const tipo2 = (data.types[1])
+        setType(tipo2 ? data.types[1].type.name : false)
+        setDisplay(tipo2 ? 'flex' : 'none')
         setLoad(false)
     }
-    // console.log(display)
     useEffect(() => {
             getPokemon()
-        }, [])
+        }, [`https://pokeapi.co/api/v2/pokemon/${id}`])
         
     return(
         <>
