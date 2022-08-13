@@ -1,0 +1,9 @@
+.pokemonsAnimation_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pokemonsAnimation{
+    width: 300px;
+}
