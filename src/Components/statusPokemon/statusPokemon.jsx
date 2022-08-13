@@ -5,7 +5,7 @@ import BarraDeStatus from "../barraDeStatus/barraDeStatus";
 import {  useState, useEffect } from "react";
 import "./statusPokemon.css"
 
-export default function StatusPokemon ({id}) {
+export default function StatusPokemon ({id}, index) {
 
     const [data, setData] = useState([]);
     const [load, setLoad] = useState (true)
@@ -42,36 +42,36 @@ export default function StatusPokemon ({id}) {
 
                     <div className="tipos">
                         <Type 
-                        key = {data.id} 
+                        key = {index} 
                         type = {data.types[0].type.name}
                         />
                         <Type  
-                        key = {data.id}
+                        key = {index}
                         display = {display}
                         type = {type} 
                         />
                     </div>
 
                     <BarraDeStatus
-                        key={data.id}
+                        key={index}
                         name={data.stats[0].stat.name}
                         status= {data.stats[0].base_stat}
                     />
 
                     <BarraDeStatus
-                        key={data.id}
+                        key={index}
                         name={data.stats[1].stat.name}
                         status= {data.stats[1].base_stat}
                     />
 
                     <BarraDeStatus
-                        key={data.id}
+                        key={index}
                         name={data.stats[2].stat.name}
                         status= {data.stats[2].base_stat}
                     />
 
                     <BarraDeStatus
-                        key={data.id}
+                        key={index}
                         name={data.stats[5].stat.name}
                         status= {data.stats[5].base_stat}
                     />
