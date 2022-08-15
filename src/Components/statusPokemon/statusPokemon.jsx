@@ -65,7 +65,7 @@ export default function StatusPokemon (index) {
                     className="imag"
                     onClick={()=> (easterEgg())}
                     />
-                    <div>{data.name}</div>
+                    <div>{data.name} #{data.id}</div>
 
                     <div className="tipos">
                         <Type 
