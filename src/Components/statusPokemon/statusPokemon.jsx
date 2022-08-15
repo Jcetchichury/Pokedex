@@ -32,17 +32,12 @@ export default function StatusPokemon (index) {
     function easterEgg(){
         if (id == 25){
             count++
-            console.log(count)
-            console.log (count >= 3)
             if (count >= 3){
                 setImg (data.sprites.other.dream_world.front_default)
             }
         } else{
             count = 0
-            console.log(id == 25)
-            console.log(count)
         }
-        console.log(img)
     }
 
     useEffect(() => {
@@ -70,6 +65,7 @@ export default function StatusPokemon (index) {
                     className="imag"
                     onClick={()=> (easterEgg())}
                     />
+                    <div>{data.name}</div>
 
                     <div className="tipos">
                         <Type 
