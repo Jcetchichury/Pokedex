@@ -3,7 +3,7 @@ import LoadAnimation_Pokemons from "../../Components/loadAnimetion/loadAnimation
 import { useNavigate } from "react-router-dom";
 import "./listaDosPokemons.css"
 
-const ListaDosPokemons = (props) => {
+const ListaDosPokemons = (props, index) => {
 
     const navigation = useNavigate()
     const [pokemon, setPokemon] = useState([])
@@ -34,8 +34,8 @@ const ListaDosPokemons = (props) => {
         <div>
             <button
                 className="pokemon"
-                key={pokemon.id}
-                id= {pokemon.id}
+                key={index}
+                id= {'botao'+pokemon.id}
                 name={pokemon.name}
                 hp= {pokemon.stats[0].base_stat}
                 ataque= {pokemon.stats[1].base_stat}
@@ -54,5 +54,3 @@ const ListaDosPokemons = (props) => {
 }
 
 export default ListaDosPokemons
-
-// img={pokemonStats.sprites.other.dream_world.front_default}

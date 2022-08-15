@@ -1,31 +1,55 @@
-import React from "react";
+import React, {  useState, useEffect } from "react";
 import LoadAnimation from "../loadAnimetion/loadAnimation";
-import Type from "../type/type";
 import BarraDeStatus from "../barraDeStatus/barraDeStatus";
-import {  useState, useEffect } from "react";
+import Type from "../type/type";
 import "./statusPokemon.css"
+import { useParams } from "react-router-dom";
 
-export default function StatusPokemon ({id}, index) {
+export default function StatusPokemon (index) {
+    const {id} = useParams()
 
     const [data, setData] = useState([]);
     const [load, setLoad] = useState (true)
     const [type, setType] = useState ()
     const [display, setDisplay] = useState('')
+    const [img, setImg] = useState()
+    let count = 0 
 
-    const getPokemon = async () => {
+    const link = `https://pokeapi.co/api/v2/pokemon/${id}`
+
+    let getPokemon = async () => {
         
-        const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
+        const res = await fetch(link)
         const data = await res.json()
         setData(data)
+        setImg(data.sprites.front_default)
         const tipo2 = (data.types[1])
         setType(tipo2 ? data.types[1].type.name : false)
         setDisplay(tipo2 ? 'flex' : 'none')
         setLoad(false)
-    }
-    useEffect(() => {
-            getPokemon()
-        }, [`https://pokeapi.co/api/v2/pokemon/${id}`])
         
+    }
+    function easterEgg(){
+        if (id == 25){
+            count++
+            console.log(count)
+            console.log (count >= 3)
+            if (count >= 3){
+                setImg (data.sprites.other.dream_world.front_default)
+            }
+        } else{
+            count = 0
+            console.log(id == 25)
+            console.log(count)
+        }
+        console.log(img)
+    }
+
+    useEffect(() => {
+        getPokemon()
+    }, [link])
+
+
     return(
         <>
 
@@ -33,12 +57,19 @@ export default function StatusPokemon ({id}, index) {
         
             <LoadAnimation />
 
-        :
+                :
         
 
             <section>
                 <div className="bordaStatus">
-                    <img src={data.sprites.other.dream_world.front_default} alt={data.name} className="imag" />
+                    <img 
+                    key={index} 
+                    id={data.id} 
+                    src={img}  
+                    alt={data.name} 
+                    className="imag"
+                    onClick={()=> (easterEgg())}
+                    />
 
                     <div className="tipos">
                         <Type 
