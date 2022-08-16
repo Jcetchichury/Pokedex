@@ -4,3 +4,9 @@
   align-items: center;
   font-family: 'DynaPuff', cursive;
 }
+
+@media screen and (max-width:900px) {
+  .body {
+    flex-direction: column;
+  }
+}
