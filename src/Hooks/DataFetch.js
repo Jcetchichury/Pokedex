@@ -1,9 +1,10 @@
-import React, {useState, useEffect} from "react";
+import React, {useState, useEffect } from "react";
 import ListaDosPokemons from "../Components/listaDosPokemons/listaDosPokemons";
 
 
 export default function DataFetch (){
     const [pokemons, setPokemons] = useState([]);
+    const [busca, setBusca] = useState("")
 
     useEffect(() => {
     fetch('https://pokeapi.co/api/v2/pokemon/?limit=251')
@@ -11,11 +12,21 @@ export default function DataFetch (){
         .then(json => setPokemons(json.results))
     }, [])
 
-    return (       
+    const pokemonsFilter = pokemons.filter((pokemons) => 
+        pokemons.name.includes(busca.toLocaleLowerCase()) || pokemons.url.split('/')[6] === ( busca )
+    )
+    
+    return (        
             <div>
-                {pokemons.map( (pokemon, index) => 
+                <input
+                type="text"
+                className="busca"
+                value={busca}
+                onChange = {(ev) => setBusca(ev.target.value)}
+                ></input>
+                {pokemonsFilter.map( (pokemon, index) => 
                     <ListaDosPokemons
-                        key = {index}
+                        key = {pokemon.name}
                         pokemonData = {pokemon.url}
                     />)
                 }
