@@ -1,8 +1,9 @@
 import React from "react";
 import "./barraDeStatus.css"
 
-const BarraDeStatus = ({name, status}) => {
-    const divisor = 100/240
+const BarraDeStatus = ({name, status, max}) => {
+    console.log(max)
+    const divisor = 100/max
     const barStatus = status*divisor
 
     return (

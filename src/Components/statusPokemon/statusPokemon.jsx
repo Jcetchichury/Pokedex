@@ -80,21 +80,25 @@ export default function StatusPokemon () {
                     <BarraDeStatus
                         name={data.stats[0].stat.name}
                         status= {data.stats[0].base_stat}
+                        max={255}
                     />
 
                     <BarraDeStatus
                         name={data.stats[1].stat.name}
                         status= {data.stats[1].base_stat}
+                        max={181}
                     />
 
                     <BarraDeStatus
                         name={data.stats[2].stat.name}
                         status= {data.stats[2].base_stat}
+                        max={230}
                     />
 
                     <BarraDeStatus
                         name={data.stats[5].stat.name}
                         status= {data.stats[5].base_stat}
+                        max={160}
                     />
                     
                 </div>
