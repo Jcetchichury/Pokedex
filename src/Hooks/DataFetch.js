@@ -18,25 +18,35 @@ export default function DataFetch (){
     
     return (        
             <div 
-            style={{display: 'flex',
-                justifCcontent: 'center',
-                alignItems: "center",
-                flexDirection: "column"
-            }}
+                style={{display: 'flex',
+                    justifCcontent: 'center',
+                    alignItems: "center",
+                    flexDirection: "column"
+                }}
             >
-                <input
-                type="text"
-                className="busca"
-                value={busca}
-                onChange = {(ev) => setBusca(ev.target.value)}
-                placeholder="nome ou id"
-                ></input>
-                {pokemonsFilter.map( (pokemon, index) => 
-                    <ListaDosPokemons
-                        key = {pokemon.name}
-                        pokemonData = {pokemon.url}
-                    />)
-                }
+                <div className="buscaCointeiner">
+                    <input
+                        type="text"
+                        className="busca"
+                        value={busca}
+                        onChange = {(ev) => setBusca(ev.target.value)}
+                        placeholder="nome ou id"
+                    ></input>
+                </div>
+                <div style={{
+                    paddingTop: "40px",
+                    display: 'flex',
+                    justifCcontent: 'center',
+                    alignItems: "center",
+                    flexDirection: "column"
+                    }}>
+                    {pokemonsFilter.map( (pokemon, index) => 
+                        <ListaDosPokemons
+                            key = {pokemon.name}
+                            pokemonData = {pokemon.url}
+                        />)
+                    }
+                </div>
             </div>
     )
 }
