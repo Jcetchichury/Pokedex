@@ -7,7 +7,7 @@ export default function DataFetch (){
     const [busca, setBusca] = useState("")
 
     useEffect(() => {
-    fetch('https://pokeapi.co/api/v2/pokemon/?limit=251')
+    fetch('https://pokeapi.co/api/v2/pokemon/?limit=905')
         .then(response => response.json())
         .then(json => setPokemons(json.results))
     }, [])
@@ -17,7 +17,13 @@ export default function DataFetch (){
     )
     
     return (        
-            <div>
+            <div 
+            style={{display: 'flex',
+                justifCcontent: 'center',
+                alignItems: "center",
+                flexDirection: "column"
+            }}
+            >
                 <input
                 type="text"
                 className="busca"
