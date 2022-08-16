@@ -5,7 +5,7 @@ import Type from "../type/type";
 import "./statusPokemon.css"
 import { useParams } from "react-router-dom";
 
-export default function StatusPokemon (index) {
+export default function StatusPokemon () {
     const {id} = useParams()
 
     const [data, setData] = useState([]);
@@ -24,7 +24,7 @@ export default function StatusPokemon (index) {
         setData(data)
         setImg(data.sprites.front_default)
         const tipo2 = (data.types[1])
-        setType(tipo2 ? data.types[1].type.name : false)
+        setType(tipo2 ? data.types[1].type.name : "")
         setDisplay(tipo2 ? 'flex' : 'none')
         setLoad(false)
         
@@ -58,7 +58,7 @@ export default function StatusPokemon (index) {
             <section>
                 <div className="bordaStatus">
                     <img 
-                    key={index} 
+                    // key={index} 
                     id={data.id} 
                     src={img}  
                     alt={data.name} 
@@ -69,36 +69,36 @@ export default function StatusPokemon (index) {
 
                     <div className="tipos">
                         <Type 
-                        key = {index} 
+                        // key = {index} 
                         type = {data.types[0].type.name}
                         />
                         <Type  
-                        key = {index}
+                        // key = {index}
                         display = {display}
                         type = {type} 
                         />
                     </div>
 
                     <BarraDeStatus
-                        key={index}
+                        // key={index}
                         name={data.stats[0].stat.name}
                         status= {data.stats[0].base_stat}
                     />
 
                     <BarraDeStatus
-                        key={index}
+                        // key={index}
                         name={data.stats[1].stat.name}
                         status= {data.stats[1].base_stat}
                     />
 
                     <BarraDeStatus
-                        key={index}
+                        // key={index}
                         name={data.stats[2].stat.name}
                         status= {data.stats[2].base_stat}
                     />
 
                     <BarraDeStatus
-                        key={index}
+                        // key={index}
                         name={data.stats[5].stat.name}
                         status= {data.stats[5].base_stat}
                     />
