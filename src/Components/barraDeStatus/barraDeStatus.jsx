@@ -8,7 +8,7 @@ const BarraDeStatus = ({name, status}) => {
     return (
         <>
             <div className="status">
-                <p> {name} </p>
+                <div style={{margin:"auto"}}> {name} </div>
                 <div className="barra">
                     <div className="barraPorgressiva" style={{width: barStatus+'%'}}>{status}</div>
                 </div>
