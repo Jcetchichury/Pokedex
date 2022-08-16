@@ -37,10 +37,6 @@ const ListaDosPokemons = (props, index) => {
                 key={index}
                 id= {'botao'+pokemon.id}
                 name={pokemon.name}
-                hp= {pokemon.stats[0].base_stat}
-                ataque= {pokemon.stats[1].base_stat}
-                defesa= {pokemon.stats[2].base_stat}
-                velocidade= {pokemon.stats[5].base_stat}
                 onClick={() =>{
                     navigation(`/pokemonStatus/${pokemon.id}`, { replace: true, id:pokemon.id })
                     }} 
