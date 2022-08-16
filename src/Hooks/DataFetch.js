@@ -13,9 +13,9 @@ export default function DataFetch (){
     }, [])
 
     const pokemonsFilter = pokemons.filter((pokemons) => 
-        pokemons.name.includes(busca.toLocaleLowerCase()) || pokemons.url.includes(busca)
+        pokemons.name.includes(busca.toLocaleLowerCase()) || pokemons.url.split('/')[6] === ( busca )
     )
-
+    
     return (        
             <div>
                 <input
@@ -26,7 +26,7 @@ export default function DataFetch (){
                 ></input>
                 {pokemonsFilter.map( (pokemon, index) => 
                     <ListaDosPokemons
-                        key = {index}
+                        key = {pokemon.name}
                         pokemonData = {pokemon.url}
                     />)
                 }
