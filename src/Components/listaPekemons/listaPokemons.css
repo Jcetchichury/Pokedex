@@ -49,6 +49,16 @@
     border-radius: 15px;
 }
 
+.lista::-webkit-scrollbar{
+    width: 10px;
+    border-radius: 10px;
+
+}
+.lista::-webkit-scrollbar-thumb{
+    background-color: orange;
+    border-radius: 10px;
+}
+
 .lista {
     display: flex;
     justify-content: center;
@@ -57,5 +67,5 @@
     height: 520px;
     border-radius: 15px;
     padding-left: 0px;
-    overflow: auto;
+    overflow-y: scroll;
 }
