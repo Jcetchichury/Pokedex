@@ -57,8 +57,7 @@ export default function StatusPokemon () {
 
             <section>
                 <div className="bordaStatus">
-                    <img 
-                    // key={index} 
+                    <img  
                     id={data.id} 
                     src={img}  
                     alt={data.name} 
@@ -69,36 +68,31 @@ export default function StatusPokemon () {
 
                     <div className="tipos">
                         <Type 
-                        // key = {index} 
                         type = {data.types[0].type.name}
                         />
+
                         <Type  
-                        // key = {index}
                         display = {display}
                         type = {type} 
                         />
                     </div>
 
                     <BarraDeStatus
-                        // key={index}
                         name={data.stats[0].stat.name}
                         status= {data.stats[0].base_stat}
                     />
 
                     <BarraDeStatus
-                        // key={index}
                         name={data.stats[1].stat.name}
                         status= {data.stats[1].base_stat}
                     />
 
                     <BarraDeStatus
-                        // key={index}
                         name={data.stats[2].stat.name}
                         status= {data.stats[2].base_stat}
                     />
 
                     <BarraDeStatus
-                        // key={index}
                         name={data.stats[5].stat.name}
                         status= {data.stats[5].base_stat}
                     />
