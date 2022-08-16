@@ -23,6 +23,7 @@ export default function DataFetch (){
                 className="busca"
                 value={busca}
                 onChange = {(ev) => setBusca(ev.target.value)}
+                placeholder="nome ou id"
                 ></input>
                 {pokemonsFilter.map( (pokemon, index) => 
                     <ListaDosPokemons
